@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Client</title>
+    </head>
+    <body>
+        <header>
+            <script src="~/lib/jquery//dist/jquery.min.js"></script>
+            <script>
+                $.ajax({
+                    type:"Get",
+                url: "https://localhost:7234/api/Employees/MasterEmployees"
+                }).done((results) =>{
+                    console.log(results);
+                });
+            </script>
+        </header>
+    </body>
+</html>
